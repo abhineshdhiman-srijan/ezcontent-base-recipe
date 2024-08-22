@@ -1,0 +1,356 @@
+name: 'EzContent base'
+description: "Enable base themes and configuration. Meant as a lighter base than the default installation profile"
+type: 'Setup'
+
+# Modules to install to support the profile.
+install:
+  - admin_toolbar_tools
+  # - autosave_form
+  - block_content
+  - breakpoint
+  - ckeditor5
+  - color
+  - comment
+  - config
+  - config_rewrite
+  - contact
+  - content_lock_timeout
+  - contextual
+  - crop
+  - dblog
+  - editor
+  - email_registration
+  - entity_embed
+  - field_ui
+  - file
+  - formtips
+  - fvm
+  - gin_login
+  - gin_toolbar
+  - google_analytics
+  - help
+  - history
+  - media
+  - image
+  - image_widget_crop
+  - linkit
+  - moderation_dashboard
+  - moderation_sidebar
+  - options
+  - path
+  - pathauto
+  # Install primary module.
+  - password_policy
+  # Install submodules.
+  - password_policy_characters
+  - password_policy_history
+  - password_policy_length
+  - quickedit
+  - rdf
+  - redirect
+  - robotstxt
+  - scheduler_content_moderation_integration
+  - schema_metatag
+  - search
+  - shortcut
+  - simple_sitemap
+  - smart_trim
+  - social_media_links
+  - taxonomy
+  - toolbar
+  - update_helper_checklist
+  - views
+  - views_ui
+  - vertical_tabs_config
+  - workflows
+  - gin
+  - ezcontent_admin
+
+config:
+  import:
+    password_policy:
+      # Add Password Policy Settings
+      - password_policy.settings
+      # Add Password Policy fields.
+      - field.field.user.user.field_last_password_reset
+      - field.field.user.user.field_password_expiration
+      - field.field.user.user.field_pending_expire_sent
+      - field.storage.user.field_last_password_reset
+      - field.storage.user.field_password_expiration
+      - field.storage.user.field_pending_expire_sent
+      # The 90-day policy is imported by default from this recipe's config folder.
+  actions:
+    # system.theme:
+    #   simple_config_update:
+    #     admin: 'ezcontent_admin'
+    filter.format.basic_html:
+      simple_config_update:
+        langcode: en
+        status: true
+        dependencies:
+          module:
+            - editor
+            - entity_embed
+            - linkit
+            - media
+        _core:
+          default_config_hash: zDXereqt2Mb4GwfO8nJdaxxUB_wnxpYkT7ivGsyegSM
+        name: 'Basic HTML'
+        format: basic_html
+        weight: 0
+        filters:
+          filter_html:
+            id: filter_html
+            provider: filter
+            status: true
+            weight: -49
+            settings:
+              allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <div data-oembed-url> <drupal-entity data-entity-type data-entity-uuid data-entity-substitution data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode alt title> <blockquote cite> <ul type> <ol type start> <img data-entity-substitution src alt height width data-entity-uuid data-entity-type data-caption data-align> <a hreflang accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution href> <strong> <em> <code> <li>'
+              filter_html_help: false
+              filter_html_nofollow: false
+          filter_align:
+            id: filter_align
+            provider: filter
+            status: true
+            weight: -48
+            settings: {  }
+          filter_caption:
+            id: filter_caption
+            provider: filter
+            status: true
+            weight: -47
+            settings: {  }
+          editor_file_reference:
+            id: editor_file_reference
+            provider: editor
+            status: true
+            weight: -45
+            settings: {  }
+          entity_embed:
+            id: entity_embed
+            provider: entity_embed
+            status: true
+            weight: -46
+            settings: {  }
+          linkit:
+            id: linkit
+            provider: linkit
+            status: true
+            weight: -50
+            settings:
+              title: false
+          filter_url:
+            id: filter_url
+            provider: filter
+            status: false
+            weight: -42
+            settings:
+              filter_url_length: 72
+          # media_embed:
+          #   id: media_embed
+          #   provider: media
+          #   status: false
+          #   weight: -39
+          #   settings:
+          #     default_view_mode: default
+          #     allowed_view_modes: {  }
+          #     allowed_media_types: {  }
+          filter_html_image_secure:
+            id: filter_html_image_secure
+            provider: filter
+            status: false
+            weight: -41
+            settings: {  }
+          filter_htmlcorrector:
+            id: filter_htmlcorrector
+            provider: filter
+            status: false
+            weight: -40
+            settings: {  }
+          filter_autop:
+            id: filter_autop
+            provider: filter
+            status: false
+            weight: -43
+            settings: {  }
+          filter_html_escape:
+            id: filter_html_escape
+            provider: filter
+            status: false
+            weight: -44
+            settings: {  }
+    filter.format.full_html:
+      simple_config_update:
+        langcode: en
+        status: true
+        dependencies:
+          module:
+            - editor
+            - entity_embed
+            - linkit
+            - media
+        _core:
+          default_config_hash: OBe1HPM6TmdV6OEhytzymD8HqzP_V8dIdr5cgGFNXIM
+        name: 'Full HTML'
+        format: full_html
+        weight: 1
+        filters:
+          filter_align:
+            id: filter_align
+            provider: filter
+            status: true
+            weight: -49
+            settings: {  }
+          filter_caption:
+            id: filter_caption
+            provider: filter
+            status: true
+            weight: -48
+            settings: {  }
+          filter_htmlcorrector:
+            id: filter_htmlcorrector
+            provider: filter
+            status: true
+            weight: -46
+            settings: {  }
+          editor_file_reference:
+            id: editor_file_reference
+            provider: editor
+            status: true
+            weight: -45
+            settings: {  }
+          entity_embed:
+            id: entity_embed
+            provider: entity_embed
+            status: true
+            weight: -47
+            settings: {  }
+          filter_html:
+            id: filter_html
+            provider: filter
+            status: false
+            weight: -44
+            settings:
+              allowed_html: ''
+              filter_html_help: true
+              filter_html_nofollow: false
+          linkit:
+            id: linkit
+            provider: linkit
+            status: true
+            weight: -50
+            settings:
+              title: false
+          filter_url:
+            id: filter_url
+            provider: filter
+            status: false
+            weight: -41
+            settings:
+              filter_url_length: 72
+          # media_embed:
+          #   id: media_embed
+          #   provider: media
+          #   status: false
+          #   weight: -39
+          #   settings:
+          #     default_view_mode: default
+          #     allowed_view_modes: {  }
+          #     allowed_media_types: {  }
+          filter_html_image_secure:
+            id: filter_html_image_secure
+            provider: filter
+            status: false
+            weight: -40
+            settings: {  }
+          filter_autop:
+            id: filter_autop
+            provider: filter
+            status: false
+            weight: -42
+            settings: {  }
+          filter_html_escape:
+            id: filter_html_escape
+            provider: filter
+            status: false
+            weight: -43
+            settings: {  }
+    image.style.thumbnail:
+      simple_config_update:
+        langcode: en
+        status: true
+        dependencies:
+          config:
+            - crop.type.crop_16_9
+          module:
+            - crop
+        name: thumbnail
+        label: 'Thumbnail (100×100)'
+        effects:
+          1cfec298-8620-4749-b100-ccb6c4500779:
+            uuid: 1cfec298-8620-4749-b100-ccb6c4500779
+            id: image_scale
+            weight: -9
+            data:
+              width: 100
+              height: 100
+              upscale: false
+          1e5b1fca-8d29-462d-8997-dfb0d4620bb9:
+            uuid: 1e5b1fca-8d29-462d-8997-dfb0d4620bb9
+            id: crop_crop
+            weight: -10
+            data:
+              crop_type: crop_16_9
+    user.role.anonymous:
+        ensure_exists:
+          id: anonymous
+        grantPermissions:
+          - 'access content'
+          - 'administer display modes'
+          - 'use text format restricted_html'
+          - 'view media'
+    user.settings:
+      simple_config_update:
+        anonymous: Anonymous
+        verify_mail: true
+        notify:
+          cancel_confirm: true
+          password_reset: true
+          status_activated: true
+          status_blocked: false
+          status_canceled: false
+          register_admin_created: true
+          register_no_approval_required: true
+          register_pending_approval: true
+        register: admin_only
+        cancel_method: user_cancel_block
+        password_reset_timeout: 86400
+        password_strength: true
+        langcode: en
+ # Adds Two new fields to the user form. The third field is hidden by default.
+    core.entity_form_display.user.user.default:
+      setComponents:
+        -
+          name: field_last_password_reset
+          options:
+            type: datetime_default
+            weight: 4
+            region: content
+            settings: {  }
+            third_party_settings: {  }
+        -
+          name: field_password_expiration
+          options:
+            type: boolean_checkbox
+            weight: 3
+            region: content
+            settings:
+              display_label: true
+            third_party_settings: {  }
+
+
+
+
+
+
+

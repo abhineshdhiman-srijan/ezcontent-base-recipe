@@ -1,0 +1,52 @@
+{
+    "name": "drupal_recipe/ezcontent-base-recipe",
+    "description": "Enable base themes and configuration. Meant as a lighter base than the default installation profile",
+    "type": "drupal-recipe",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "bower-asset/colorbox": "^1.6",
+        "cweagans/composer-patches": "~1",
+        "drupal/admin_toolbar": "^3.3",
+        "drupal/color": "^1.0",
+        "drupal/color_field": "^3.0",
+        "drupal/colorbox": "^2.0",
+        "drupal/config_rewrite": "^1.5",
+        "drupal/core": "^10.3",
+        "drupal/email_registration": "^1.2",
+        "drupal/entity_embed": "^1.4",
+        "drupal/field_group": "^3.4",
+        "drupal/fvm": "^2.0.3",
+        "drupal/gin_login": "^2.0",
+        "drupal/gin_toolbar": "^1.0@RC",
+        "drupal/google_analytics": "^4.0",
+        "drupal/image_widget_crop": "^2.4",
+        "drupal/linkit": "^6.1",
+        "drupal/metatag": "^2.0",
+        "drupal/moderation_dashboard": "^2.1",
+        "drupal/moderation_sidebar": "^1.7",
+        "drupal/password_policy": "^4.0",
+        "drupal/pathauto": "^1.11",
+        "drupal/quickedit": "^1.0",
+        "drupal/redirect": "^1.8",
+        "drupal/rdf": "^2.1",
+        "drupal/robotstxt": "^1.5",
+        "drupal/scheduler": "^2.0@RC",
+        "drupal/scheduler_content_moderation_integration": "^2.0.0-beta1",
+        "drupal/schema_metatag": "^3.0",
+        "drupal/simple_sitemap": "^4.1",
+        "drupal/social_media": "^2.0",
+        "drupal/social_media_links": "^2.9",
+        "drupal/update_helper": "^4.0",
+        "oomphinc/composer-installers-extender": "^1.1 || ^2"
+    },
+    "license": "GPL-2.0-or-later"
+}
