@@ -1,5 +1,5 @@
 {
-    "name": "drupal_recipe/ezcontent-base-recipe",
+    "name": "abhineshdhiman-srijan/ezcontent-base-recipe",
     "description": "Enable base themes and configuration. Meant as a lighter base than the default installation profile",
     "type": "drupal-recipe",
     "repositories": [
