@@ -48,5 +48,6 @@
         "drupal/update_helper": "^4.0",
         "oomphinc/composer-installers-extender": "^1.1 || ^2"
     },
+     "minimum-stability": "dev",
     "license": "GPL-2.0-or-later"
 }
