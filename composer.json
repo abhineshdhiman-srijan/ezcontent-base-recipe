@@ -21,6 +21,7 @@
         "drupal/colorbox": "^2.0",
         "drupal/config_rewrite": "^1.5",
         "drupal/core": "^10.3",
+        "drupal/checklistapi": "^2.1",
         "drupal/email_registration": "^1.2",
         "drupal/entity_embed": "^1.4",
         "drupal/field_group": "^3.4",
