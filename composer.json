@@ -25,6 +25,7 @@
         "drupal/entity_embed": "^1.4",
         "drupal/field_group": "^3.4",
         "drupal/fvm": "^2.0.3",
+        "drupal/gin":"^3.0@RC",
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@RC",
         "drupal/google_analytics": "^4.0",
