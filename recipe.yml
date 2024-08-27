@@ -64,7 +64,7 @@ install:
   - vertical_tabs_config
   - workflows
   - gin
-  - ezcontent_admin
+  # - ezcontent_admin
 
 config:
   import:
