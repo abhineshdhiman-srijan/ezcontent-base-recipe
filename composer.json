@@ -2,16 +2,6 @@
     "name": "abhineshdhiman-srijan/ezcontent-base-recipe",
     "description": "Enable base themes and configuration. Meant as a lighter base than the default installation profile",
     "type": "drupal-recipe",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
     "require": {
         "bower-asset/colorbox": "^1.6",
         "cweagans/composer-patches": "~1",
